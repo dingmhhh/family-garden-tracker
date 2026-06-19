@@ -97,7 +97,7 @@ export default function QuickEntry() {
           <label className="label">日期</label>
           <input
             type="date"
-            className="input"
+            className="input max-w-[180px]"
             value={form.harvest_date}
             onChange={(e) => setForm((f) => ({ ...f, harvest_date: e.target.value }))}
           />
