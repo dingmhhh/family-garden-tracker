@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-cream text-leaf-900 font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-base font-semibold
+      transition active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none;
+  }
+  .btn-primary {
+    @apply btn bg-leaf-600 text-white hover:bg-leaf-700 shadow-soft;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-leaf-700 border border-leaf-200 hover:bg-leaf-50;
+  }
+  .btn-danger {
+    @apply btn bg-tomato-500 text-white hover:bg-tomato-600;
+  }
+  .btn-sm {
+    @apply px-3 py-2 text-sm rounded-lg;
+  }
+  .input {
+    @apply w-full rounded-xl border border-leaf-200 bg-white px-4 py-3 text-base text-leaf-900
+      placeholder:text-leaf-400 focus:outline-none focus:ring-2 focus:ring-leaf-400 focus:border-transparent;
+  }
+  .label {
+    @apply block text-sm font-medium text-leaf-700 mb-1;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-leaf-100 p-4 sm:p-6;
+  }
+  .page-title {
+    @apply text-2xl sm:text-3xl font-semibold text-leaf-800 mb-1;
+  }
+  .page-sub {
+    @apply text-leaf-500 text-sm mb-6;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full bg-leaf-100 text-leaf-700 px-3 py-1 text-xs font-medium;
+  }
+}
